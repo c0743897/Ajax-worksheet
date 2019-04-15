@@ -1,37 +1,29 @@
 <html>
-    <head>
-       <script language ="javascript">
-       var XHobj=false;
-       if(window.XMLHttpRequest)
-       {
-           XHobj=new ActiveXObject("Mircosoft.XMLHTTP");
-       }
-       else if(window.ActiveXObject){
-       XHobj=new ActiveXObject("Mircosoft.XMLHTTP");
-       function fetchdata(datasource,divID)
-       {
-               if(XHobj)
-               {
-                   XHobj.open("GET",datasource);
-                   XHobj.onereadystagechange=function()
-                   {
-                       if(XHobj.readyState==4 && XHobj.status==200)
-                  
-                   document.getElementById(divID).innerHTML=Xobj.responseText;
-                   };
-                   
-               }
-           
-        }
-        Xobj.send(null);
-        }
-       </script>
-    </head>
+    <head></head>
     <body>
-        <h3>Welcome to ajax</h3>
-        <form>
-            <input type=button value="Fetch message" onclick="fetchdata('info.txt','myDiv')">
-            <div id="myDiv"><b>ajax</b></div>
-        </form>
+        <p>Mca</p>
+        <p id="pressme">Press Me</p>
+        <script type="text/javascript">
+        var pElems=document.getElementsByTagName("p");
+        for(var i=0;i<pElewms.length;i++){
+            pElems[i].addEventListener("mouseover",handleMouseOver);
+            pElems[i].addEventListener("mouseout",handleMouseOut);
+        }
+        document.getElementById("pressme").onclick=function(){
+            document.getElementById("block2").removeEventListener("mouseout",handleMouseOut);
+        }
+        function handleMouseOver(e){
+            e.target.innerHTML+="2016";
+            e.target.style.background='white';
+            e.target.style.color='black';
+        }
+        function handleMouseOut(e){
+            e.target.innerjQuery =+"result";
+            e.target.style.removeProperty('color');
+            e.target.style.removeProperty('background');
+        }
+        </script>
     </body>
+      
+    
 </html>
